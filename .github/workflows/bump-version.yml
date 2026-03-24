@@ -1,0 +1,42 @@
+name: Bump Version on Dev
+
+on:
+  workflow_run:
+    workflows: ["Tag"]
+    types:
+      - completed
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  bump-version:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout dev
+        uses: actions/checkout@v4
+        with:
+          ref: dev
+
+      - name: Get current version
+        id: version
+        run: |
+          CURRENT_VERSION=$(grep "version=" gradle.properties | cut -d= -f2)
+          echo "CURRENT_VERSION=$CURRENT_VERSION" >> $GITHUB_OUTPUT
+          IFS='.' read -ra VERSION_PARTS <<< "$CURRENT_VERSION"
+          NEW_VERSION="${VERSION_PARTS[0]}.${VERSION_PARTS[1]}.${VERSION_PARTS[2]}.$((VERSION_PARTS[3]+1))"
+          echo "NEW_VERSION=$NEW_VERSION" >> $GITHUB_OUTPUT
+
+      - name: Configure Git
+        run: |
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+          git config --global user.name "${{ github.actor }}"
+
+      - name: Bump version on dev
+        run: |
+          sed -i "s/version=.*/version=${{ steps.version.outputs.NEW_VERSION }}/" gradle.properties
+          git add gradle.properties
+          git commit -m "chore: bump version to ${{ steps.version.outputs.NEW_VERSION }}"
+          git push origin dev
