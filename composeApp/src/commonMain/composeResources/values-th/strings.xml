@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="icon_name">ชื่อไอคอน</string>
+    <string name="icon_delete_description">ไอคอนถังขยะเคลื่อนไหว</string>
+    <string name="icon_download_description">ไอคอนการดาวน์โหลดเคลื่อนไหว</string>
+    <string name="icon_fullscreen_description">ไอคอนเต็มหน้าจอเคลื่อนไหว</string>
+    <string name="icon_rocket_description">ไอคอนจรวดเคลื่อนไหว</string>
+    
+    <string name="close">ปิด</string>
+    <string name="code">รหัส</string>
+    <string name="kotlin_compose">Kotlin Compose</string>
+    <string name="copied">คัดลอกแล้ว!</string>
+    <string name="copy">คัดลอก</string>
+
+    <string name="grid_title">ไอคอนแอนิเมชัน Kotlin Compose</string>
+    <string name="grid_description">คอลเลกชันไอคอนแอนิเมชันที่สร้างด้วย Kotlin Compose ล้วนๆ\nไม่ต้องใช้ไลบรารีภายนอก เพียงคัดลอกโค้ดและนำไปใช้แอนิเมชันไอคอนในแอปของคุณ!</string>
+
+    <string name="theme_switcher">ธีม</string>
+    <string name="dark_theme">มืด</string>
+    <string name="light_theme">สว่าง</string>
+    
+    <string name="language_switcher">เลือกภาษา</string>
+    
+    <string name="select_language_title">เลือกภาษา</string>
+    <string name="language_english">ภาษาอังกฤษ</string>
+    <string name="language_french">ภาษาฝรั่งเศส</string>
+    <string name="language_thai">ภาษาไทย</string>
+</resources>

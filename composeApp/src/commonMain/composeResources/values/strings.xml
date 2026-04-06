@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="icon_name">Icon Name</string>
+    <string name="icon_delete_description">Animated trash can icon</string>
+    <string name="icon_close_description">Animated close icon</string>
+    <string name="icon_download_description">Animated download icon</string>
+    <string name="icon_fullscreen_description">Animated fullscreen icon</string>
+    <string name="icon_thumb_up_description">Animated thumb up icon</string>
+    <string name="icon_rocket_description">Animated rocket icon</string>
+
+    <string name="close">Close</string>
+    <string name="code">Code</string>
+    <string name="kotlin_compose">Kotlin Compose</string>
+    <string name="copied">Copied!</string>
+    <string name="copy">Copy</string>
+    
+    <string name="grid_title">Kotlin Compose Animated Icons</string>
+    <string name="grid_description">A collection of animated icons built purely with Kotlin Compose.\nNo external libraries, just copy the code and animate your apps icons!
+</string>
+
+    <string name="theme_switcher">Theme</string>
+    <string name="dark_theme">Dark</string>
+    <string name="light_theme">Light</string>
+    
+    <string name="language_switcher">Select language</string>
+    
+    <string name="select_language_title">Select Language</string>
+    <string name="language_english">English</string>
+    <string name="language_french">French</string>
+    <string name="language_thai">Thai</string>
+</resources>
