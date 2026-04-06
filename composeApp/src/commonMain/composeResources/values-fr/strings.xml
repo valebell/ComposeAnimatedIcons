@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="icon_name">Nom de l'icône</string>
+    <string name="icon_delete_description">Icône de corbeille animée</string>
+    <string name="icon_download_description">Icône de téléchargement animée</string>
+    <string name="icon_fullscreen_description">Icône plein écran animée</string>
+    <string name="icon_rocket_description">Icône de fusée animée</string>
+
+    <string name="close">Fermer</string>
+    <string name="code">Code</string>
+    <string name="kotlin_compose">Kotlin Compose</string>
+    <string name="copied">Copié!</string>
+    <string name="copy">Copier</string>
+    
+    <string name="grid_title">Icônes animées Kotlin Compose</string>
+    <string name="grid_description">Une collection d'icônes animées créées uniquement avec Kotlin Compose.\nAucune bibliothèque externe, il suffit de copier le code et d'animer les icônes de vos applications!</string>
+    
+    <string name="theme_switcher">Thème</string>
+    <string name="dark_theme">Sombre</string>
+    <string name="light_theme">Clair</string>
+    
+    <string name="language_switcher">Sélectionner la langue</string>
+    
+    <string name="select_language_title">Sélectionner la langue</string>
+    <string name="language_english">Anglais</string>
+    <string name="language_french">Français</string>
+    <string name="language_thai">Thaï</string>
+</resources>
