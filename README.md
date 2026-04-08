@@ -1,42 +1,57 @@
-This is a Kotlin Multiplatform project targeting Web.
+# ComposeAnimatedIcons
 
-* [/composeApp](./composeApp/src) is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - [commonMain](./composeApp/src/commonMain/kotlin) is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    the [iosMain](./composeApp/src/iosMain/kotlin) folder would be the right place for such calls.
-    Similarly, if you want to edit the Desktop (JVM) specific part, the [jvmMain](./composeApp/src/jvmMain/kotlin)
-    folder is the appropriate location.
+ComposeAnimatedIcons is hosting a collection of reusable, animated icon components written in Kotlin for Jetpack Compose.
+Each icon is provided as a standalone .kt file, ready to be copied and pasted directly into your Jetpack Compose project, no external dependencies or setup required.
 
-### Build and Run Web Application
+## What’s Inside?
 
-To build and run the development version of the web app, use the run configuration from the run widget
-in your IDE's toolbar or run it directly from the terminal:
-- for the Wasm target (faster, modern browsers):
-  - on macOS/Linux
-    ```shell
-    ./gradlew :composeApp:wasmJsBrowserDevelopmentRun
-    ```
-  - on Windows
-    ```shell
-    .\gradlew.bat :composeApp:wasmJsBrowserDevelopmentRun
-    ```
-- for the JS target (slower, supports older browsers):
-  - on macOS/Linux
-    ```shell
-    ./gradlew :composeApp:jsBrowserDevelopmentRun
-    ```
-  - on Windows
-    ```shell
-    .\gradlew.bat :composeApp:jsBrowserDevelopmentRun
-    ```
+- **Ready-to-use icons:** A library of animated icons.
+- **Copy-paste components:** Each icon is a self-contained Kotlin function, making integration effortless.
+- **Customizable:** Adjust animation speed, color, size with simple parameters.
+- **Cross-platform:** Icons work in Android, iOS, Web, and Desktop projects using Jetpack Compose.
+
+## Live Demo
+
+Try it now: [https://valebell.github.io/ComposeAnimatedIcons/](https://valebell.github.io/ComposeAnimatedIcons/)
+
+<img width="1231" height="787" alt="AnimatedIcons" src="https://github.com/user-attachments/assets/9bed6c0c-54ee-4dc4-8b2e-8c12fe6669b3" />
+
+
+### Running the project locally
+
+```bash
+# Clone the repository
+git clone https://github.com/valebell/ComposeAnimatedIcons.git
+
+# Run the web demo
+./gradlew :composeApp:wasmJsBrowserDevelopmentRun
+```
+
+Then open `http://localhost:8080` in your browser.
+
+## Customization
+
+Each icon supports customization:
+
+```kotlin
+Rocket(
+    animate = true,                // Control animation state
+    shouldLoop = true,             // Loop animation continuously
+    tint = Color.Blue,             // Custom color
+    contentDescription = "Launch", // Accessibility
+    loopDelayMs = 1000             // Delay between loops
+)
+```
+
+## Contributing
+
+Want to add your own animated icon? We'd love your contribution!
+See [CONTRIBUTING.md](CONTRIBUTING.md) for full guidelines.
+
+## License
+
+MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html),
-[Compose Multiplatform](https://github.com/JetBrains/compose-multiplatform/#compose-multiplatform),
-[Kotlin/Wasm](https://kotl.in/wasm/)…
-
-We would appreciate your feedback on Compose/Web and Kotlin/Wasm in the public Slack channel [#compose-web](https://slack-chats.kotlinlang.org/c/compose-web).
-If you face any issues, please report them on [YouTrack](https://youtrack.jetbrains.com/newIssue?project=CMP).
+Made with ❤️ using Kotlin Multiplatform and Jetpack Compose
